@@ -27,32 +27,31 @@ export default function Hero() {
       </div>
 
       <div className="pointer-events-none fixed z-10 flex items-center justify-center hero-intro">
-        <div className="relative text-4xl font-semibold tracking-[0.04em] text-white/90 md:text-5xl lg:text-6xl">
-          <span className="hero-intro__dsg-wrap">
-            <span className="hero-intro__dsg">DSG</span>
-          </span>
+        <div className="hero-intro__logo">
+          <span className="hero-intro__logo-dsg">DSG</span>
           <span className="hero-intro__studio">studio</span>
         </div>
+        <div className="hero-intro__watermark">DSG</div>
       </div>
 
       <div className="relative z-20">
-        <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between px-6 pt-8 hero-animate-down hero-delay-1 sm:px-10 lg:px-[72px]">
+        <div className="mx-auto grid w-full max-w-[1320px] grid-cols-[1fr_auto_1fr] items-center px-6 pt-8 hero-animate-down hero-delay-1 sm:px-10 lg:px-[72px]">
           <div className="text-lg font-semibold tracking-tight">DSG.studio</div>
-          <div className="flex items-center gap-10">
-            <nav className="hidden items-center gap-16 text-sm font-medium tracking-[0.04em] md:flex">
-              {["о нас", "услуги", "портфолио", "контакты"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="group relative text-white/90 transition hover:text-white"
-                >
-                  <span className="transition-opacity group-hover:opacity-80">
-                    {item}
-                  </span>
-                  <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/70 transition group-hover:scale-x-100" />
-                </a>
-              ))}
-            </nav>
+          <nav className="hidden items-center justify-center gap-16 text-sm font-medium tracking-[0.04em] md:flex">
+            {["о нас", "услуги", "портфолио", "контакты"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="group relative text-white/90 transition hover:text-white"
+              >
+                <span className="transition-opacity group-hover:opacity-80">
+                  {item}
+                </span>
+                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/70 transition group-hover:scale-x-100" />
+              </a>
+            ))}
+          </nav>
+          <div className="flex justify-end">
             <button
               type="button"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 transition hover:border-white/80"
