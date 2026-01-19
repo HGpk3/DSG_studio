@@ -166,13 +166,18 @@
 @keyframes hero-dsg-watermark {
   0% {
     opacity: 1;
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, 0) scale(0.22);
+    filter: blur(0);
+  }
+  45% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.28);
     filter: blur(0);
   }
   100% {
     opacity: 0.14;
     transform: translate(0, 0) scale(1);
-    filter: blur(6px);
+    filter: blur(16px);
   }
 }
 
@@ -202,7 +207,7 @@
     animation: none !important;
     opacity: 0.14 !important;
     transform: translate(0, 0) scale(1) !important;
-    filter: blur(6px) !important;
+    filter: blur(16px) !important;
   }
 
   .hero-animate-bg,
