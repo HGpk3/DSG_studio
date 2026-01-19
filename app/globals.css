@@ -22,6 +22,12 @@
 }
 
 .hero-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 105vw;
+  height: 105vh;
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 
