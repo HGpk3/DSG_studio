@@ -50,8 +50,9 @@
 .hero-intro__dsg {
   display: inline-block;
   position: relative;
-  font-size: min(48vw, 48vh);
-  letter-spacing: 0.04em;
+  font-size: min(105vw, 105vh);
+  letter-spacing: 0;
+  line-height: 1;
   text-transform: uppercase;
   transform-origin: 50% 50%;
   animation:
@@ -171,7 +172,7 @@
   100% {
     opacity: 0.14;
     transform: translate(0, 0) scale(1);
-    filter: blur(2px);
+    filter: blur(6px);
   }
 }
 
@@ -201,7 +202,7 @@
     animation: none !important;
     opacity: 0.14 !important;
     transform: translate(0, 0) scale(1) !important;
-    filter: blur(2px) !important;
+    filter: blur(6px) !important;
   }
 
   .hero-animate-bg,
