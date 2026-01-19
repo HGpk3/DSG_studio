@@ -26,31 +26,32 @@ export default function Hero() {
         <div className="absolute bottom-8 left-1/3 h-[420px] w-[560px] rotate-[8deg] rounded-[38%] bg-white/10 blur-3xl" />
       </div>
 
-      <div className="pointer-events-none fixed inset-0 z-10 flex items-center justify-center hero-intro">
-        <div className="relative text-4xl font-semibold tracking-[0.04em] text-white/90 md:text-5xl lg:text-6xl">
-          <span className="hero-intro__dsg">DSG</span>
+      <div className="pointer-events-none fixed z-10 flex items-center justify-center hero-intro">
+        <div className="hero-intro__logo">
+          <span className="hero-intro__logo-dsg">DSG</span>
           <span className="hero-intro__studio">studio</span>
         </div>
+        <div className="hero-intro__watermark">DSG</div>
       </div>
 
       <div className="relative z-20">
-        <div className="mx-auto flex w-full max-w-[1240px] items-center px-10 pt-8 hero-animate-down hero-delay-1">
+        <div className="mx-auto grid w-full max-w-[1320px] grid-cols-[1fr_auto_1fr] items-center px-6 pt-8 hero-animate-down hero-delay-1 sm:px-10 lg:px-[72px]">
           <div className="text-lg font-semibold tracking-tight">DSG.studio</div>
-          <div className="ml-auto flex items-center gap-12">
-            <nav className="hidden items-center gap-16 text-sm font-medium tracking-[0.04em] md:flex">
-              {["о нас", "услуги", "портфолио", "контакты"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="group relative text-white/90 transition hover:text-white"
-                >
-                  <span className="transition-opacity group-hover:opacity-80">
-                    {item}
-                  </span>
-                  <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/70 transition group-hover:scale-x-100" />
-                </a>
-              ))}
-            </nav>
+          <nav className="hidden items-center justify-center gap-16 text-sm font-medium tracking-[0.04em] md:flex">
+            {["о нас", "услуги", "портфолио", "контакты"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="group relative text-white/90 transition hover:text-white"
+              >
+                <span className="transition-opacity group-hover:opacity-80">
+                  {item}
+                </span>
+                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/70 transition group-hover:scale-x-100" />
+              </a>
+            ))}
+          </nav>
+          <div className="flex justify-end">
             <button
               type="button"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 transition hover:border-white/80"
@@ -65,14 +66,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto mt-[96px] w-full max-w-[1240px] px-10 pb-24 lg:pb-28">
-          <div className="max-w-[980px]">
+        <div className="mx-auto mt-[96px] w-full max-w-[1320px] px-6 pb-24 sm:px-10 lg:px-[72px] lg:pb-28">
+          <div className="max-w-[1100px]">
             <p className="hero-animate-up hero-delay-2 text-sm font-medium uppercase tracking-[0.32em] text-white/80 md:text-base">
               СТУДИЯ
             </p>
-            <h1 className="hero-animate-up hero-delay-3 mt-5 text-[40px] font-semibold uppercase leading-[0.95] tracking-[0.01em] text-white md:text-[72px] lg:text-[96px]">
-              <span className="block whitespace-nowrap">СОЗДАНИЯ</span>
-              <span className="block">САЙТОВ</span>
+            <h1 className="hero-animate-up hero-delay-3 mt-5 whitespace-nowrap text-[36px] font-semibold uppercase leading-[0.95] tracking-[0.01em] text-white sm:text-[48px] md:text-[72px] lg:text-[96px]">
+              СОЗДАНИЯ САЙТОВ
             </h1>
             <p className="hero-animate-up hero-delay-4 mt-6 max-w-[560px] text-base leading-relaxed text-white/85 md:text-lg md:leading-[1.55]">
               Берём на себя всё: аналитику, дизайн, разработку, адаптацию под
