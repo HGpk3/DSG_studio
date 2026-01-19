@@ -39,7 +39,7 @@ export default function Hero() {
   const backgroundStyle = useMemo(
     () => ({
       backgroundImage:
-        "radial-gradient(circle at 15% 10%, rgba(255,255,255,0.12), transparent 48%), radial-gradient(circle at 65% 25%, rgba(255,255,255,0.18), transparent 42%), radial-gradient(circle at 85% 80%, rgba(255,255,255,0.12), transparent 50%), linear-gradient(135deg, #2b2b31 0%, #3a3a40 35%, #2b2b31 100%)",
+        "radial-gradient(1200px 520px at 30% 10%, rgba(255,255,255,0.22), transparent 58%), radial-gradient(900px 520px at 75% 20%, rgba(255,255,255,0.2), transparent 55%), radial-gradient(760px 620px at 80% 85%, rgba(255,255,255,0.16), transparent 60%), linear-gradient(135deg, #2b2c30 0%, #3a3b41 35%, #2b2c30 100%)",
     }),
     [],
   );
@@ -47,8 +47,11 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden text-white">
       <div className="absolute inset-0" style={backgroundStyle}>
-        <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.22)_1px,transparent_0)] [background-size:120px_120px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.12),transparent_50%)]" />
+        <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.28)_1px,transparent_0)] [background-size:140px_140px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.16),transparent_55%)]" />
+        <div className="absolute -left-24 top-24 h-[420px] w-[520px] rotate-[12deg] rounded-[38%] bg-white/10 blur-3xl" />
+        <div className="absolute right-20 top-32 h-[360px] w-[520px] -rotate-[10deg] rounded-[40%] bg-white/10 blur-3xl" />
+        <div className="absolute bottom-10 left-1/3 h-[420px] w-[560px] rotate-[8deg] rounded-[38%] bg-white/10 blur-3xl" />
       </div>
 
       <motion.div
@@ -76,7 +79,7 @@ export default function Hero() {
             setContentVisible(true);
           }
         }}
-        className="pointer-events-none absolute left-1/2 top-[45%] z-10 -translate-x-1/2 -translate-y-1/2 text-3xl font-semibold tracking-tight"
+        className="pointer-events-none absolute left-1/2 top-[46%] z-10 -translate-x-1/2 -translate-y-1/2 text-4xl font-semibold tracking-tight"
         style={{ willChange: "transform, opacity, filter" }}
       >
         DSG studio
@@ -93,9 +96,9 @@ export default function Hero() {
         className="relative z-20"
         style={{ willChange: "transform, opacity, filter" }}
       >
-        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-8 pt-8">
+        <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between px-10 pt-8">
           <div className="text-lg font-semibold tracking-tight">DSG.studio</div>
-          <nav className="hidden items-center gap-10 text-sm uppercase tracking-[0.2em] md:flex">
+          <nav className="hidden items-center gap-16 text-sm font-medium md:flex">
             {["о нас", "услуги", "портфолио", "контакты"].map((item) => (
               <a
                 key={item}
@@ -115,19 +118,19 @@ export default function Hero() {
             aria-label="Открыть меню"
           >
             <span className="flex flex-col gap-1">
-              <span className="h-[2px] w-5 rounded-full bg-white" />
-              <span className="h-[2px] w-4 self-end rounded-full bg-white" />
-              <span className="h-[2px] w-5 rounded-full bg-white" />
+              <span className="h-[2px] w-6 rounded-full bg-white" />
+              <span className="h-[2px] w-6 rounded-full bg-white" />
+              <span className="h-[2px] w-6 rounded-full bg-white" />
             </span>
           </button>
         </div>
 
-        <div className="mx-auto mt-20 w-full max-w-[1200px] px-8 pb-24">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-white/70">
+        <div className="mx-auto mt-24 w-full max-w-[1240px] px-10 pb-28">
+          <div className="max-w-[680px]">
+            <p className="text-base uppercase tracking-[0.32em] text-white/80">
               СТУДИЯ
             </p>
-            <h1 className="mt-4 text-4xl font-semibold uppercase leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="mt-4 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight md:text-[64px] lg:text-[88px]">
               СОЗДАНИЯ{" "}
               <span className="inline-flex min-w-[7ch] items-baseline">
                 {displayedText}
@@ -136,13 +139,13 @@ export default function Hero() {
                 )}
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-base text-white/80 md:text-lg">
+            <p className="mt-6 max-w-[520px] text-base text-white/85 md:text-lg">
               Берём на себя всё: аналитику, дизайн, разработку, адаптацию под
               мобильные устройства и запуск.
             </p>
             <button
               type="button"
-              className="mt-10 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-medium text-white shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur transition hover:bg-white/15 hover:shadow-[0_16px_50px_rgba(0,0,0,0.4)]"
+              className="mt-10 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/10 px-7 py-3 text-sm font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur transition hover:bg-white/15 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_22px_50px_rgba(0,0,0,0.45)]"
             >
               Обсудить проект бесплатно
             </button>
