@@ -14,7 +14,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPhase("transform");
-    }, 820);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -68,8 +68,8 @@ export default function Hero() {
           watermark: {
             opacity: 0.22,
             scale: 7.2,
-            x: "-18vw",
-            y: "-30vh",
+            x: 0,
+            y: 0,
             filter: "blur(10px)",
           },
         }}
@@ -82,7 +82,20 @@ export default function Hero() {
         className="pointer-events-none absolute left-1/2 top-[46%] z-10 -translate-x-1/2 -translate-y-1/2 text-4xl font-semibold tracking-[0.05em]"
         style={{ willChange: "transform, opacity, filter" }}
       >
-        DSG
+        <span className="inline-flex items-baseline gap-2">
+          <span>DSG</span>
+          <motion.span
+            initial={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            animate={
+              phase === "intro"
+                ? { opacity: 1, x: 0, filter: "blur(0px)" }
+                : { opacity: 0, x: 80, filter: "blur(6px)" }
+            }
+            transition={{ duration: 0.7, ease: easeOutExpo }}
+          >
+            studio
+          </motion.span>
+        </span>
       </motion.div>
 
       <motion.div
