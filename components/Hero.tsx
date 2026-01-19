@@ -25,11 +25,7 @@ export default function Hero() {
         <div className="absolute bottom-8 left-1/3 h-[420px] w-[560px] rotate-[8deg] rounded-[38%] bg-white/10 blur-3xl" />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 z-10 hero-watermark">
-        <div className="hero-watermark__label">DSG</div>
-      </div>
-
-      <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center hero-intro">
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center hero-intro">
         <div className="relative text-4xl font-semibold tracking-[0.04em] text-white/90 md:text-5xl lg:text-6xl">
           <span className="hero-intro__dsg">DSG</span>
           <span className="hero-intro__studio">studio</span>
