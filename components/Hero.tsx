@@ -28,7 +28,9 @@ export default function Hero() {
 
       <div className="pointer-events-none fixed z-10 flex items-center justify-center hero-intro">
         <div className="relative text-4xl font-semibold tracking-[0.04em] text-white/90 md:text-5xl lg:text-6xl">
-          <span className="hero-intro__dsg">DSG</span>
+          <span className="hero-intro__dsg-wrap">
+            <span className="hero-intro__dsg">DSG</span>
+          </span>
           <span className="hero-intro__studio">studio</span>
         </div>
       </div>

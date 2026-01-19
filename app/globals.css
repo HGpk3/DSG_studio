@@ -47,7 +47,7 @@
   opacity: 1;
 }
 
-.hero-intro__dsg {
+.hero-intro__dsg-wrap {
   display: inline-block;
   position: relative;
   font-size: min(105vw, 105vh);
@@ -58,6 +58,12 @@
   transform: scale(0.22);
   animation: hero-dsg-watermark 1.4s ease 1.2s forwards;
   will-change: transform, opacity, filter;
+}
+
+.hero-intro__dsg {
+  display: inline-block;
+  animation: hero-dsg-impact 0.5s ease 0.85s;
+  will-change: transform;
 }
 
 .hero-intro__studio {
@@ -155,10 +161,10 @@
     transform: scale(1);
   }
   70% {
-    transform: scaleX(0.96) scaleY(1.02);
+    transform: scaleX(0.94) scaleY(1.04);
   }
   85% {
-    transform: scaleX(1.02) scaleY(0.99);
+    transform: scaleX(1.04) scaleY(0.98);
   }
 }
 
@@ -202,11 +208,15 @@
     display: none !important;
   }
 
-  .hero-intro__dsg {
+  .hero-intro__dsg-wrap {
     animation: none !important;
     opacity: 0.14 !important;
     transform: translate(0, 0) scale(1) !important;
     filter: blur(16px) !important;
+  }
+
+  .hero-intro__dsg {
+    animation: none !important;
   }
 
   .hero-animate-bg,
