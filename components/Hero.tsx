@@ -19,9 +19,20 @@ export default function Hero() {
       >
         <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.28)_1px,transparent_0)] [background-size:140px_140px]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.16),transparent_55%)]" />
+        <div className="absolute inset-0 hero-impact-pulse" />
         <div className="absolute -left-24 top-20 h-[420px] w-[520px] rotate-[12deg] rounded-[38%] bg-white/10 blur-3xl" />
         <div className="absolute right-16 top-28 h-[360px] w-[520px] -rotate-[10deg] rounded-[40%] bg-white/10 blur-3xl" />
         <div className="absolute bottom-8 left-1/3 h-[420px] w-[560px] rotate-[8deg] rounded-[38%] bg-white/10 blur-3xl" />
+      </div>
+
+      <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center hero-intro">
+        <div className="relative text-4xl font-semibold tracking-[0.04em] text-white/90 md:text-5xl lg:text-6xl">
+          <span className="hero-intro__dsg">DSG</span>
+          <span className="hero-intro__studio">studio</span>
+          <span className="hero-intro__dsg hero-intro__dsg--watermark">
+            DSG
+          </span>
+        </div>
       </div>
 
       <div className="relative z-20">

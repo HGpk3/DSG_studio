@@ -11,6 +11,48 @@
   animation: hero-fade 0.9s ease forwards;
 }
 
+.hero-impact-pulse {
+  opacity: 0;
+  background: radial-gradient(
+    420px 220px at 50% 45%,
+    rgba(255, 255, 255, 0.28),
+    transparent 70%
+  );
+  animation: hero-impact-pulse 0.5s ease-out 0.9s forwards;
+}
+
+.hero-intro {
+  opacity: 1;
+  animation: hero-intro-hide 0.6s ease 2.2s forwards;
+}
+
+.hero-intro__dsg {
+  display: inline-block;
+  position: relative;
+}
+
+.hero-intro__dsg--watermark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  filter: blur(0);
+  animation: hero-dsg-watermark 1.2s ease 1.2s forwards;
+  pointer-events: none;
+}
+
+.hero-intro__studio {
+  display: inline-block;
+  margin-left: 0.35em;
+  opacity: 0;
+  animation: hero-studio-fly 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-intro__dsg {
+  animation: hero-dsg-impact 0.5s ease 0.85s forwards;
+}
+
 .hero-animate-up,
 .hero-animate-down {
   opacity: 0;
@@ -23,23 +65,23 @@
 }
 
 .hero-delay-1 {
-  animation-delay: 0.3s;
+  animation-delay: 1.25s;
 }
 
 .hero-delay-2 {
-  animation-delay: 0.42s;
+  animation-delay: 1.4s;
 }
 
 .hero-delay-3 {
-  animation-delay: 0.54s;
+  animation-delay: 1.55s;
 }
 
 .hero-delay-4 {
-  animation-delay: 0.66s;
+  animation-delay: 1.7s;
 }
 
 .hero-delay-5 {
-  animation-delay: 0.78s;
+  animation-delay: 1.85s;
 }
 
 @keyframes hero-fade {
@@ -73,7 +115,80 @@
   }
 }
 
+@keyframes hero-studio-fly {
+  0% {
+    opacity: 0;
+    transform: translateX(160px);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+}
+
+@keyframes hero-dsg-impact {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scaleX(0.96) scaleY(1.02);
+  }
+  85% {
+    transform: scaleX(1.02) scaleY(0.99);
+  }
+}
+
+@keyframes hero-dsg-watermark {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0.22;
+    transform: translate(-50%, -50%) scale(7.2);
+    filter: blur(6px);
+  }
+}
+
+@keyframes hero-intro-hide {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-impact-pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-intro {
+    display: none !important;
+  }
+
+  .hero-impact-pulse {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
   .hero-animate-bg,
   .hero-animate-up,
   .hero-animate-down {
