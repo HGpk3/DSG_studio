@@ -67,10 +67,10 @@ export default function Hero() {
           },
           watermark: {
             opacity: 0.22,
-            scale: 2.6,
-            x: "-28vw",
-            y: "-28vh",
-            filter: "blur(6px)",
+            scale: 7.2,
+            x: "-18vw",
+            y: "-30vh",
+            filter: "blur(10px)",
           },
         }}
         transition={{ duration: 1.3, ease: easeOutExpo }}
@@ -79,10 +79,10 @@ export default function Hero() {
             setContentVisible(true);
           }
         }}
-        className="pointer-events-none absolute left-1/2 top-[46%] z-10 -translate-x-1/2 -translate-y-1/2 text-4xl font-semibold tracking-tight"
+        className="pointer-events-none absolute left-1/2 top-[46%] z-10 -translate-x-1/2 -translate-y-1/2 text-4xl font-semibold tracking-[0.05em]"
         style={{ willChange: "transform, opacity, filter" }}
       >
-        DSG studio
+        DSG
       </motion.div>
 
       <motion.div
@@ -125,12 +125,12 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="mx-auto mt-24 w-full max-w-[1240px] px-10 pb-28">
-          <div className="max-w-[680px]">
+        <div className="mx-auto mt-[92px] w-full max-w-[1240px] px-12 pb-28">
+          <div className="max-w-[720px]">
             <p className="text-base uppercase tracking-[0.32em] text-white/80">
               СТУДИЯ
             </p>
-            <h1 className="mt-4 text-[44px] font-semibold uppercase leading-[0.95] tracking-tight md:text-[64px] lg:text-[88px]">
+            <h1 className="mt-5 text-[46px] font-semibold uppercase leading-[0.95] tracking-tight md:text-[66px] lg:text-[92px]">
               СОЗДАНИЯ{" "}
               <span className="inline-flex min-w-[7ch] items-baseline">
                 {displayedText}
