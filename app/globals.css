@@ -22,11 +22,18 @@
 }
 
 .hero-texture {
-  opacity: 0.32;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='520' height='520' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='980' height='980' viewBox='0 0 980 980'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.52' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='980' height='980' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E"),
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.02) 28%,
+      rgba(0, 0, 0, 0.18) 62%,
+      rgba(255, 255, 255, 0.12) 100%
+    );
   background-size: cover;
   background-repeat: no-repeat;
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
   pointer-events: none;
 }
 
@@ -43,7 +50,7 @@
 .hero-intro__dsg {
   display: inline-block;
   position: relative;
-  font-size: clamp(64px, 18vw, 220px);
+  font-size: min(48vw, 48vh);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transform-origin: 50% 50%;
@@ -51,21 +58,6 @@
     hero-dsg-impact 0.5s ease 0.85s,
     hero-dsg-watermark 1.4s ease 1.2s forwards;
   will-change: transform, opacity, filter;
-  mask-image: radial-gradient(
-      120% 120% at 85% 75%,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.6) 45%,
-      rgba(0, 0, 0, 0) 75%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.8) 55%,
-      rgba(0, 0, 0, 1) 100%
-    );
-  mask-composite: intersect;
-  mask-repeat: no-repeat;
-  mask-size: 100% 100%;
 }
 
 .hero-intro__studio {
@@ -178,7 +170,7 @@
   }
   100% {
     opacity: 0.14;
-    transform: translate(18vw, 16vh) scale(7.5);
+    transform: translate(0, 0) scale(1);
     filter: blur(2px);
   }
 }
@@ -208,7 +200,7 @@
   .hero-intro__dsg {
     animation: none !important;
     opacity: 0.14 !important;
-    transform: translate(18vw, 16vh) scale(7.5) !important;
+    transform: translate(0, 0) scale(1) !important;
     filter: blur(2px) !important;
   }
 
